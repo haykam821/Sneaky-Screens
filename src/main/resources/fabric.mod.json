@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "shiftymenus",
+	"version": "${version}",
+
+	"name": "Shifty Menus",
+	"description": "Persists the sneak state in menus.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Shifty-Menus#readme",
+		"issues": "https://github.com/haykam821/Shifty-Menus/issues"
+	},
+
+	"license": "MIT",
+	"icon": "assets/shiftymenus/icon.png",
+
+	"environment": "client",
+	"mixins": [
+		"shiftymenus.mixins.json"
+	],
+
+	"depends": {
+		"fabricloader": ">=0.4.0"
+	},
+
+	"custom": {
+		"modmenu:clientsideOnly": true
+	}
+}
