@@ -1,4 +1,4 @@
-package io.github.haykam821.shiftymenus.mixin;
+package io.github.haykam821.sneakyscreens.mixin;
 
 import net.minecraft.client.options.KeyBinding;
 import net.minecraft.client.MinecraftClient;

@@ -1,24 +1,24 @@
 {
 	"schemaVersion": 1,
-	"id": "shiftymenus",
+	"id": "sneakyscreens",
 	"version": "${version}",
 
-	"name": "Shifty Menus",
-	"description": "Persists the sneak state in menus.",
+	"name": "Sneaky Screens",
+	"description": "Persists the sneak state in screens.",
 	"authors": [
 		"haykam821"
 	],
 	"contact": {
-		"homepage": "https://github.com/haykam821/Shifty-Menus#readme",
-		"issues": "https://github.com/haykam821/Shifty-Menus/issues"
+		"homepage": "https://github.com/haykam821/Sneaky-Screens#readme",
+		"issues": "https://github.com/haykam821/Sneaky-Screens/issues"
 	},
 
 	"license": "MIT",
-	"icon": "assets/shiftymenus/icon.png",
+	"icon": "assets/sneakyscreens/icon.png",
 
 	"environment": "client",
 	"mixins": [
-		"shiftymenus.mixins.json"
+		"sneakyscreens.mixins.json"
 	],
 
 	"depends": {

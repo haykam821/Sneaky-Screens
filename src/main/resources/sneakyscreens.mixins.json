@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "io.github.haykam821.shiftymenus.mixin",
+	"package": "io.github.haykam821.sneakyscreens.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [],
 	"client": [

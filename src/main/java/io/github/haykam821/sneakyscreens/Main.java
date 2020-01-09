@@ -1,4 +1,4 @@
-package io.github.haykam821.shiftymenus;
+package io.github.haykam821.sneakyscreens;
 
 import net.minecraft.client.MinecraftClient;
 

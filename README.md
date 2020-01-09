@@ -1,2 +1,2 @@
-# Shifty-Menus
- Persists the sneak state in menus.
+# Sneaky-Screens
+ Persists the sneak state in screens.
