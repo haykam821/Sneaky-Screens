@@ -1,7 +1,6 @@
 package io.github.haykam821.sneakyscreens.mixin;
 
-import net.minecraft.client.options.GameOptions;
-import net.minecraft.client.options.KeyBinding;
+import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.MinecraftClient;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,10 +13,9 @@ import io.github.haykam821.sneakyscreens.Main;
 
 @Mixin(GameOptions.class)
 public class GameOptionsMixin {
-	@Shadow KeyBinding keySneak;
 	@Shadow boolean sneakToggled;
 
-	@Inject(at = @At("RETURN"), method = "method_23487", cancellable = true)
+	@Inject(at = @At("RETURN"), method = "method_23487", cancellable = true, remap = false)
     private void load(CallbackInfoReturnable<Boolean> info) {
 		info.setReturnValue(Main.toggleGetter(this.sneakToggled, MinecraftClient.getInstance()));
 	}
