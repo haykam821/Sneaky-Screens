@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "io.github.haykam821.sneakyscreens.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"client": [
+		"GameOptionsMixin119"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

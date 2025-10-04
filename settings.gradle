@@ -7,3 +7,8 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+
+include("common")
+
+include("support:1.18")
+include("support:1.19")

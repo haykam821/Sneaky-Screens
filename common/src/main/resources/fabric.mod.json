@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "sneakyscreens-common",
+	"version": "${version}",
+	"name": "Sneaky Screens Common",
+	"description": "Handles common logic to support multiple versions of Minecraft.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Sneaky-Screens#readme",
+		"issues": "https://github.com/haykam821/Sneaky-Screens/issues"
+	},
+	"license": "MIT",
+	"environment": "client",
+	"mixins": [
+		"sneakyscreens-common.mixins.json"
+	],
+	"custom": {
+		"modmenu": {
+			"parent": "sneakyscreens",
+			"badges": [
+				"library"
+			]
+		}
+	}
+}

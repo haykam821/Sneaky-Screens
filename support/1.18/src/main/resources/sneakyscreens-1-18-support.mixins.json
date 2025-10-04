@@ -2,11 +2,8 @@
 	"required": true,
 	"package": "io.github.haykam821.sneakyscreens.mixin",
 	"compatibilityLevel": "JAVA_8",
-	"plugin": "io.github.haykam821.sneakyscreens.mixin.SneakyScreensMixinConfigPlugin",
 	"client": [
-		"GameOptionsMixin",
-		"GameOptionsMixin119",
-		"MinecraftClientMixin"
+		"GameOptionsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

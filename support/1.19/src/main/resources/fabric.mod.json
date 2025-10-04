@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "sneakyscreens-1-19-support",
+	"version": "${version}",
+	"name": "Sneaky Screens 1.19 Support",
+	"description": "Adds support for Minecraft versions 1.19 and later.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Sneaky-Screens#readme",
+		"issues": "https://github.com/haykam821/Sneaky-Screens/issues"
+	},
+	"license": "MIT",
+	"environment": "client",
+	"mixins": [
+		"sneakyscreens-1-19-support.mixins.json"
+	],
+	"custom": {
+		"modmenu": {
+			"parent": "sneakyscreens",
+			"badges": [
+				"library"
+			]
+		}
+	},
+	"depends": {
+		"sneakyscreens-common": "*",
+		"minecraft": ">=1.19-alpha.22.12.a"
+	}
+}

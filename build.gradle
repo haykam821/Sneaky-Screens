@@ -1,13 +1,6 @@
 plugins {
-	id "fabric-loom" version "1.11.8"
+	id "fabric-loom" version "1.11.8" apply false
 	id "maven-publish"
-}
-
-version = project.mod_version
-group = project.maven_group
-
-base {
-	archivesName = project.archives_base_name
 }
 
 repositories {
@@ -17,31 +10,51 @@ repositories {
 	}
 }
 
-dependencies {
-	// Main
-	minecraft("com.mojang:minecraft:${project.minecraft_version}")
-	mappings("net.fabricmc:yarn:${project.yarn_mappings}:v2")
-	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
-}
+allprojects {
+	apply(plugin: "fabric-loom")
 
-processResources {
-	inputs.property "version", project.version
+	version = project.mod_version
+	group = project.maven_group
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+	base {
+		archivesName = project.archives_base_name
+	}
+
+	dependencies {
+		minecraft("com.mojang:minecraft:${project.minecraft_version}")
+		mappings("net.fabricmc:yarn:${project["yarn_mappings"]}:v2")
+		modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
+	}
+
+	tasks.withType(ProcessResources).configureEach {
+		inputs.property "version", project.version
+
+		filesMatching("fabric.mod.json") {
+			expand "version": project.version
+		}
+	}
+
+	java {
+		sourceCompatibility = JavaVersion.VERSION_1_8
+		targetCompatibility = JavaVersion.VERSION_1_8
+	}
+
+	tasks.withType(JavaCompile) {
+		options.release = 8
+		options.encoding = "UTF-8"
+	}
+
+	jar {
+		from "LICENSE"
 	}
 }
 
-java {
-	sourceCompatibility = JavaVersion.VERSION_1_8
-	targetCompatibility = JavaVersion.VERSION_1_8
-}
-
-tasks.withType(JavaCompile) {
-	options.release = 8
-	options.encoding = "UTF-8"
-}
-
-jar {
-	from "LICENSE"
+dependencies {
+	afterEvaluate {
+		subprojects.each {
+			if (it.path.startsWith(":support:") || it.path == ":common") {
+				include(project(it.path))
+			}
+		}
+	}
 }

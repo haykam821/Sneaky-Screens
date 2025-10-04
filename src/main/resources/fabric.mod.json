@@ -2,7 +2,6 @@
 	"schemaVersion": 1,
 	"id": "sneakyscreens",
 	"version": "${version}",
-
 	"name": "Sneaky Screens",
 	"description": "Persists the sneak state in screens.",
 	"authors": [
@@ -12,15 +11,9 @@
 		"homepage": "https://github.com/haykam821/Sneaky-Screens#readme",
 		"issues": "https://github.com/haykam821/Sneaky-Screens/issues"
 	},
-
 	"license": "MIT",
 	"icon": "assets/sneakyscreens/icon.png",
-
 	"environment": "client",
-	"mixins": [
-		"sneakyscreens.mixins.json"
-	],
-
 	"depends": {
 		"fabricloader": ">=0.4.0"
 	}
