@@ -11,13 +11,13 @@ import net.minecraft.client.option.StickyKeyBinding;
 
 @Mixin(StickyKeyBinding.class)
 public class StickyKeyBindingMixin extends KeyBinding {
-	private StickyKeyBindingMixin(String id, int code, KeyBinding.class_11900 category) {
+	private StickyKeyBindingMixin(String id, int code, KeyBinding.Category category) {
 		super(id, code, category);
 	}
 
 	@Inject(method = "reset", at = @At("HEAD"), cancellable = true)
 	private void preventResettingSneak(CallbackInfo ci) {
-		if (Main.SNEAK_KEY_ID.equals(this.getTranslationKey())) {
+		if (Main.SNEAK_KEY_ID.equals(this.getId())) {
 			ci.cancel();
 		}
 	}

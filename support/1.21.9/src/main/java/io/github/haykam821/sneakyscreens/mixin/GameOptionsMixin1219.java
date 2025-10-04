@@ -19,8 +19,8 @@ public class GameOptionsMixin1219 {
 	@Final
 	private MinecraftClient client;
 
-	@ModifyArg(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/StickyKeyBinding;<init>(Ljava/lang/String;ILnet/minecraft/client/option/KeyBinding$class_11900;Ljava/util/function/BooleanSupplier;)V"), index = 3)
-	private BooleanSupplier modifyToggleGetter(String id, int code, KeyBinding.class_11900 category, BooleanSupplier toggleGetter) {
+	@ModifyArg(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/StickyKeyBinding;<init>(Ljava/lang/String;ILnet/minecraft/client/option/KeyBinding$Category;Ljava/util/function/BooleanSupplier;)V"), index = 3)
+	private BooleanSupplier modifyToggleGetter(String id, int code, KeyBinding.Category category, BooleanSupplier toggleGetter) {
 		if (Main.SNEAK_KEY_ID.equals(id)) {
 			return () -> Main.toggleGetter(toggleGetter.getAsBoolean(), this.client);
 		} else {
