@@ -3,7 +3,7 @@
 	"id": "sneakyscreens-1-19-support",
 	"version": "${version}",
 	"name": "Sneaky Screens 1.19 Support",
-	"description": "Adds support for Minecraft versions 1.19 and later.",
+	"description": "Adds support for Minecraft versions 1.19 through 1.21.8.",
 	"authors": [
 		"haykam821"
 	],
@@ -26,6 +26,6 @@
 	},
 	"depends": {
 		"sneakyscreens-common": "*",
-		"minecraft": ">=1.19-alpha.22.12.a"
+		"minecraft": ">=1.19-alpha.22.12.a <1.21.9-alpha.25.32.a"
 	}
 }
