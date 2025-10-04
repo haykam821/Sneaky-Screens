@@ -11,7 +11,7 @@ import net.minecraft.client.option.StickyKeyBinding;
 
 @Mixin(StickyKeyBinding.class)
 public class StickyKeyBindingMixin extends KeyBinding {
-	private StickyKeyBindingMixin(String id, int code, String category) {
+	private StickyKeyBindingMixin(String id, int code, KeyBinding.class_11900 category) {
 		super(id, code, category);
 	}
 

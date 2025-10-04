@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "sneakyscreens-25w32a-support",
+	"version": "${version}",
+	"name": "Sneaky Screens 25w32a Support",
+	"description": "Adds support for Minecraft versions snapshot 25w32a through snapshot 25w35a.",
+	"authors": [
+		"haykam821"
+	],
+	"contact": {
+		"homepage": "https://github.com/haykam821/Sneaky-Screens#readme",
+		"issues": "https://github.com/haykam821/Sneaky-Screens/issues"
+	},
+	"license": "MIT",
+	"environment": "client",
+	"mixins": [
+		"sneakyscreens-25w32a-support.mixins.json"
+	],
+	"custom": {
+		"modmenu": {
+			"parent": "sneakyscreens",
+			"badges": [
+				"library"
+			]
+		}
+	},
+	"depends": {
+		"sneakyscreens-common": "*",
+		"minecraft": ">=1.21.9-alpha.25.32.a <1.21.9-alpha.25.36.a"
+	}
+}
