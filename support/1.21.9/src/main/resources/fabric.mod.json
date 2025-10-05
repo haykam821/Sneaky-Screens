@@ -26,6 +26,6 @@
 	},
 	"depends": {
 		"sneakyscreens-common": "*",
-		"minecraft": ">=1.21.9-alpha.25.36.a"
+		"minecraft": ">=1.21.9-alpha.25.37.a"
 	}
 }
