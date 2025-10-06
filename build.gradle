@@ -49,6 +49,14 @@ allprojects {
 	}
 }
 
+subprojects {
+	def name = project.archives_base_name + "-" + it.path.replace(/:/, "-").substring(1)
+
+	base {
+		archivesName = name
+	}
+}
+
 dependencies {
 	afterEvaluate {
 		subprojects.each {
